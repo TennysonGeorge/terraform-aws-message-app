@@ -52,36 +52,3 @@ terraform-aws-message-app
 This project is licensed under the MIT License. See the LICENSE file for more details.
 
 
-## diagram of the service 
-
-+---------------------+        +---------------------+
-|                     |        |                     |
-|  User               |        |  User               |
-|  (uploads file)     |        |  (uploads file)     |
-|                     |        |                     |
-+---------------------+        +---------------------+
-           |                             |
-           v                             v
-+---------------------+        +---------------------+
-|                     |        |                     |
-|  API Gateway        |        |  API Gateway        |
-|  (message_app_api)  |        |  (message_app_api)  |
-|                     |        |                     |
-+---------------------+        +---------------------+
-           |                             |
-           v                             v
-+---------------------+        +---------------------+
-|                     |        |                     |
-|  Lambda Function    |        |  Lambda Function    |
-|  (upload_handler)   |        |  (upload_handler)   |
-|                     |        |                     |
-+---------------------+        +---------------------+
-           |                             |
-           v                             v
-+---------------------+        +---------------------+
-|                     |        |                     |
-|  S3 Bucket          |        |  S3 Bucket          |
-|  (message_app_bucket)|       |  (message_app_bucket)|
-|                     |        |                     |
-+---------------------+        +---------------------+
-
